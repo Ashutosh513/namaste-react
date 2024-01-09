@@ -1,19 +1,16 @@
-const heading = React.createElement(
-  'h1',
-  {
-    id: 'heading',
-    name: 'ashu',
-  },
-  [
-    React.createElement('p', {}, 'Hello From Paragraph'),
-    React.createElement('p', {}, 'Second Hello From Paragraph'),
-  ]
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
+const Title = () => <h1>Namaste React From JSX!</h1>;
+
+const HeadingComponent = () => (
+  <div>
+    <Title />
+    <h1>Namaste React from Functional Component</h1>
+  </div>
 );
-
-console.log(heading);
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 console.log(root);
 
-root.render(heading);
+root.render(<HeadingComponent />);
