@@ -7,6 +7,7 @@ git commands -
       npx parcel index.html
       npx parcel build index.html (for production)
       npm run start (start is the script and npx run start = npx start, only for start)
+      npm run build
 
 React Methods -
 
