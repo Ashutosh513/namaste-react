@@ -1,3 +1,17 @@
+# upload on github -
+
+      These All steps are display when we create repository first time on github
+
+      git init
+      git branch -M main      // names branch to main
+      git add .
+      git commit -m "message"
+      git remote add origin https://github.com/Ashutosh513/Leetcode-DSA.git
+      git push -u origin main
+
+      git pull origin main
+      git push origin main
+
 git commands -
 
       npm init
