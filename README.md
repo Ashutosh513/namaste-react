@@ -12,7 +12,7 @@
       git pull origin main
       git push origin main
 
-git commands -
+# git commands -
 
       npm init
       npm install -D parcel
@@ -23,11 +23,11 @@ git commands -
       npm run start (start is the script and npx run start = npx start, only for start)
       npm run build
 
-React Methods -
+# React Methods -
 
       React.createElement('tag', {attributes}, 'content');
 
-ReactDOM Methods -
+# ReactDOM Methods -
 
       ReactDOM.createRoot(document.getElementById('root'));
       root.render(heading);
