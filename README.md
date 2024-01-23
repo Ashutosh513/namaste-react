@@ -12,6 +12,10 @@
       git pull origin main
       git push origin main
 
+      - After making email id private
+      git config user.email 84138780+Ashutosh513@users.noreply.github.com
+      git commit --amend --reset-author
+
 # git commands -
 
       npm init
