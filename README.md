@@ -12,16 +12,21 @@
       git pull origin main
       git push origin main
 
-git commands -
+# After making email id private -
 
-      npm init
-      npm install -D parcel
-      npm i react
-      npm i react-dom
-      npx parcel index.html
-      npx parcel build index.html (for production)
-      npm run start (start is the script and npx run start = npx start, only for start)
-      npm run build
+git config --global user.email "84138780+Ashutosh513@users.noreply.github.com"
+git commit --amend --reset-author
+
+# git commands -
+
+        npm init
+        npm install -D parcel
+        npm i react
+        npm i react-dom
+        npx parcel index.html
+        npx parcel build index.html (for production)
+        npm run start (start is the script and npx run start = npx start, only for start)
+        npm run build
 
 # React Methods -
 
