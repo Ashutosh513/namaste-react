@@ -1,4 +1,4 @@
-import RestaurantCards from './RestaurantCards';
+import RestaurantCards, { WithPromotedLabel } from './RestaurantCards';
 import { useState, useEffect } from 'react';
 import Shimmer from './Shimmer';
 import useOnlineStatus from '../utils/useOnlineStatus';
@@ -8,6 +8,8 @@ const Body = () => {
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
 
   const [searchText, setSearchText] = useState('');
+
+  const RestaurantCardsPromoted = WithPromotedLabel(RestaurantCards);
 
   useEffect(() => {
     fetchData();
@@ -44,7 +46,8 @@ const Body = () => {
         <div className='search-container'>
           <input
             type='text'
-            className='search-box'
+            className='search-box bg-gray-50 text-center m-4 border-solid-gray-100'
+            placeholder='Type Here'
             value={searchText}
             onChange={(e) => {
               setSearchText(e.target.value);
@@ -67,7 +70,7 @@ const Body = () => {
         </div>
 
         <button
-          className='filter-btn'
+          className='filter-btn bg-red-200 p-2 m-2 rounded-lg'
           onClick={() => {
             setFilteredRestaurants(
               listOfRestaurants.filter((res) => res?.info?.avgRating > 4.3)
@@ -77,10 +80,14 @@ const Body = () => {
           Top Rated Restaurants
         </button>
       </div>
-      <div className='res-container'>
-        {filteredRestaurants.map((res) => (
-          <RestaurantCards key={res?.info?.id} {...res?.info} />
-        ))}
+      <div className='res-container flex flex-wrap'>
+        {filteredRestaurants.map((res) =>
+          res?.info.avgRating > 4.5 ? (
+            <RestaurantCardsPromoted key={res?.info?.id} {...res?.info} />
+          ) : (
+            <RestaurantCards key={res?.info?.id} {...res?.info} />
+          )
+        )}
       </div>
     </div>
   );
